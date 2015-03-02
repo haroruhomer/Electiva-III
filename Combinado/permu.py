@@ -11,28 +11,19 @@ def Encriptar(mensaje, clave):
     index = 0
     if ValidarClave(clave):
         modulo = (len(mensaje) - 1) % len(clave)
-        print("modulo", modulo)
-
         for i in range(0, len(mensaje) - 1):
             cadena += mensaje[i]
-        print(len(clave))
-
         while modulo != 0:
             cadena += " "
             modulo = (len(cadena)) % len(clave)
-            print(cadena)
         numlistas = len(cadena) / len(clave)
         for j in range(0, int(numlistas)):
             print("j", j)
             for k in range(0, len(clave)):
-                print("k", k)
                 listaInter.append(cadena[index])
-                print(index, "index", cadena[index])
                 index += 1
             lista.append(listaInter)
             listaInter = []
-        print(lista)
-
         aux = []
         for m in range(0, len(clave)):
             aux.append(' ')
@@ -40,10 +31,7 @@ def Encriptar(mensaje, clave):
         for cont in range(len(lista)):
             for l in range(0, len(clave)):
                 aux[l] = lista[cont][int(clave[l])]
-                print("aux____", aux)
-                print("Lista+++", lista[cont])
             listaencrip.append(aux.copy())
-        print(listaencrip)
         txtEncrip = "".join("".join(x) for x in listaencrip)
         return txtEncrip
 
@@ -60,39 +48,26 @@ def Desencriptar(mensaje, clave):
     index = 0
     if ValidarClave(clave):
         modulo = (len(mensaje) - 1) % len(clave)
-        print("modulo", modulo)
-
         for i in range(0, len(mensaje) - 1):
             cadena += mensaje[i]
-        print(len(clave))
-
         while modulo != 0:
             cadena += " "
             modulo = (len(cadena)) % len(clave)
-            print(cadena)
         numlistas = len(cadena) / len(clave)
         for j in range(0, int(numlistas)):
             print("j", j)
             for k in range(0, len(clave)):
-                print("k", k)
                 listaInter.append(cadena[index])
-                print(index, "index", cadena[index])
                 index += 1
             lista.append(listaInter)
             listaInter = []
-        print(lista)
-
         aux = []
         for m in range(0, len(clave)):
             aux.append(' ')
-
         for cont in range(len(lista)):
             for l in range(0, len(clave)):
                 aux[l] = lista[cont][int(clave[l])]
-                print("aux____", aux)
-                print("Lista+++", lista[cont])
             listaencrip.append(aux.copy())
-        print(listaencrip)
         txtEncrip = "".join("".join(x) for x in listaencrip)
         return txtEncrip
 

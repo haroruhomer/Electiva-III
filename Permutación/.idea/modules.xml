@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Combinado/.idea/Combinado.iml" filepath="$PROJECT_DIR$/../Combinado/.idea/Combinado.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Permutación.iml" filepath="$PROJECT_DIR$/.idea/Permutación.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Polialfabetico/.idea/Polialfabetico.iml" filepath="$PROJECT_DIR$/../Polialfabetico/.idea/Polialfabetico.iml" />
     </modules>
   </component>
 </project>
