@@ -31,7 +31,7 @@ def Desencriptar():
 
 
 root = Tk()
-root.title('Permutación')
+root.title('Combinado')
 F_frame = Frame(root, height=600, width=800)
 L_Titulo = Label(F_frame, text="encrip")
 TB_Texto = Text(F_frame, height=5)

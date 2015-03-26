@@ -60,11 +60,9 @@ def Desencriptar(mensaje, clave):
     index = 0
     if ValidarClave(clave):
         modulo = (len(mensaje) - 1) % len(clave)
-        print("modulo", modulo)
 
         for i in range(0, len(mensaje) - 1):
             cadena += mensaje[i]
-        print(len(clave))
 
         while modulo != 0:
             cadena += " "
@@ -88,9 +86,9 @@ def Desencriptar(mensaje, clave):
 
         for cont in range(len(lista)):
             for l in range(0, len(clave)):
-                aux[l] = lista[cont][int(clave[l])]
+                print(lista[cont][int(clave[l])],int(clave[l]))
+                aux[int(clave[l])] = lista[cont][l]
                 print("aux____", aux)
-                print("Lista+++", lista[cont])
             listaencrip.append(aux.copy())
         print(listaencrip)
         txtEncrip = "".join("".join(x) for x in listaencrip)
